@@ -3,6 +3,12 @@
     margin: 0;
     box-sizing: border-box;
 }
+/*  100 100   20  => 120 * 120 */
+/*  80 80   20  => 100 * 100 */
+
+:root {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: Arial, sans-serif;
@@ -789,4 +795,26 @@ nav ul li a {
     .icons {
         display: none;
     }
+}
+.card-scroll-wrapper {
+    max-height: 500px; /* Set the visible height for scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+    display: flex;
+    flex-direction: column; /* Stack the cards vertically */
+    gap: 20px; /* Add spacing between cards */
+    padding-right: 10px; /* Avoid content being hidden behind the scrollbar */
+}
+
+/* Optional: Customize scrollbar for better aesthetics */
+.card-scroll-wrapper::-webkit-scrollbar {
+    width: 8px;
+}
+
+.card-scroll-wrapper::-webkit-scrollbar-thumb {
+    background-color: #089da1;
+    border-radius: 5px;
+}
+
+.card-scroll-wrapper::-webkit-scrollbar-track {
+    background: #f0f0f0;
 }
